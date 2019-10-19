@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const program = require('commander');
 const path = require('path');
 const render = require('../index');
@@ -7,8 +9,9 @@ program
   .option('-o, --outDir <dir>', 'output directory')
   .option('-i, --imgDir <dir>', 'image directory')
   .parse(process.argv);
- 
-var outDir = program.outDir || process.cwd();
-var imgDir = program.imgDir || path.join(process.cwd(), 'gallery');
+
+var imgDir =  process.cwd();
+var outDir = 'gallery' || program.outDir;
+if(program.imgDir) imgDir = path.join(process.cwd(), program.imgDir);
 
 render(imgDir, outDir);

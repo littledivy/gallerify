@@ -4,15 +4,19 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gallery</title>
-    <link rel="stylesheet" href="lg/lightgallery.css">
-    <script src="lg/lightgallery.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap.css">
+    <link rel="stylesheet" href="assets/lightgallery.css">
+    <script src="assets/lightgallery.js"></script>
 
   </head>
         <body>
             <ul id="lightgallery" class="list-unstyled row">
               {{ output_here }}
             </ul>
-
+            <br>
+            <footer>
+              Powered by <a href="https://github.com/DivySrivastava/gallerify">Gallerify</a>
+            </footer>
 	</body>
   <script>
             lightGallery(document.getElementById('lightgallery'));
