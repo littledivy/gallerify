@@ -29,6 +29,4 @@ var purify = (list) => {
     return purified;
 }
 
-Gallerify(__dirname, 'test');
-
 module.exports = Gallerify;
